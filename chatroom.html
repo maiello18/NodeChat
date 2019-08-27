@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>The Chat</title>
+    <link rel="stylesheet" href="public/css/chatroomstyle.css"> 
+  </head>
+  <body>
+    <header>
+        <h1>The Chat</h1>
+    </header>
+
+    <div id = "messages_container">
+      <ul id="messages"></ul>
+    </div>
+
+    <form id = "messages_form" action="">
+      <input id="messages_input" autocomplete="off" oninput="isTyping()"/><button>Send</button>
+    </form>
+
+    <!-- Trigger/Open The Modal -->
+    <button style = "display:  none;" id="myBtn">Open Modal</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id = "form_container">
+          <form id = "username_form" action="">
+            <input autofocus="autofocus" id="username_input" autocomplete="off" placeholder="Enter username..."/><button id = "join_button">Ok</button>
+            <input type="submit" id = "hidden_input" hidefocus="true" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="public/js/chatroom.js"></script>
+</html>

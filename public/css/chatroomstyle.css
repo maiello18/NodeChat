@@ -1,0 +1,157 @@
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+#messages_form { 
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+}
+#messages_form input { 
+  padding: 10px;
+  width: 90%;
+  margin-right: 2%;
+  border: 1px solid #a2a2a2;
+  background-color: #ffffff;
+  border-radius: 5px; 
+}
+#messages_form button { 
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  padding: 10px;
+  background-color: #53596b;
+  border: none;
+  color: #ffffff;
+  width: 8%;
+  border-radius: 5px;
+}
+
+#messages_form button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #ee7752; 
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+header {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#messages { padding-top: 80px; padding-bottom: 77px; list-style-type: none; margin: 0; }
+#messages li { padding: 5px 10px; }
+#messages li:nth-child(odd) { background: #eee; }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#username_form {
+  background-color: white;
+  text-align-last: center; /* Centers the "Enter username... */
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 30px 60px; 
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+}
+
+#username_form button {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  padding: 5px 8px;
+  margin: 15px auto 0 auto;
+  background-color: #53596b;
+  border: none;
+  color: #ffffff;
+  
+}
+
+#username_form button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #23a6d5; 
+  color: white;
+}
+
+#username_form input {
+  padding: 5px;
+  text-align: center;
+  color: black;
+}  
+
+#username_form input:focus {
+  outline: none;
+}
+
+#form_container {
+  text-align: center;
+}
+
+#hidden_input {
+  height: 0px;
+  width: 0px;
+  border: none;
+  padding: 0px;
+  display: none;
+}
